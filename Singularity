@@ -21,7 +21,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     # Install CloudCompare with snap
     apt install -y snapd
     snap install cloudcompare
-    snap refresh edge
+    snap refresh --edge cloudcompare
 
  %runscript
     echo "Starting CloudCompare GUI"
