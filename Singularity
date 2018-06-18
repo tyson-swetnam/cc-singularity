@@ -21,6 +21,8 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     export PATH
 
 %post
+    set -e 
+    
     echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse" >> /etc/apt/sources.list
 
     # be sure to have an updated system
@@ -28,7 +30,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt-get install -y build-essential software-properties-common
     
     # Install Blender and Meshlab
-    apt-get install blender meshlab
+    apt-get install -y blender meshlab
     
     # Install OpenGL dependencies
     apt-get install -y libglu1-mesa-dev freeglut3-dev mesa-common-dev
@@ -37,6 +39,9 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     # Add /snap to the PATH
     echo 'export PATH=$PATH:/snap/bin'>>$SINGULARITY_ENVIRONMENT
 
+    # Fix broken things
+    apt-get install -f 
+    
 # See Agisoft Cloud Scripts Github for instructions: https://github.com/agisoft-llc/cloud-scripts/blob/master/configure.sh 
 # Install latest NVIDIA drivers
 #   add-apt-repository ppa:graphics-drivers/ppa
