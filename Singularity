@@ -5,11 +5,11 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 %setup
 
     # Thread about Snap install on Singularity: https://groups.google.com/a/lbl.gov/forum/#!topic/singularity/wGfm_nf-b2I
-    # snap is already installed on my host
+    # presumes snap is already installed on my host system
     snap install cloudcompare
     snap refresh --edge cloudcompare
 
-    # copy a snap directory to your container somewhere
+    # copy a snap installed directory to the container root file system
     SNAP_BASE=/snap
     mkdir -p ${SINGULARITY_ROOTFS}$SNAP_BASE
 
@@ -27,7 +27,10 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt-get update && apt-get upgrade -y
     apt-get install -y build-essential software-properties-common
     
-    # Install OpenGL
+    # Install Blender and Meshlab
+    apt-get install blender meshlab
+    
+    # Install OpenGL dependencies
     apt-get install -y libglu1-mesa-dev freeglut3-dev mesa-common-dev
     apt-get install -y libcanberra-gtk-module
     
