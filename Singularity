@@ -33,6 +33,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     # Add /snap to the PATH
     echo 'export PATH=$PATH:/snap/bin'>>$SINGULARITY_ENVIRONMENT
 
+# See Agisoft Cloud Scripts Github for instructions: https://github.com/agisoft-llc/cloud-scripts/blob/master/configure.sh 
 # Install latest NVIDIA drivers
 #   add-apt-repository ppa:graphics-drivers/ppa
 #   apt-get update -y
