@@ -4,6 +4,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
 %setup
 
+    # Thread about Snap install on Singularity: https://groups.google.com/a/lbl.gov/forum/#!topic/singularity/wGfm_nf-b2I
     # snap is already installed on my host
     snap install cloudcompare
     snap refresh --edge cloudcompare
