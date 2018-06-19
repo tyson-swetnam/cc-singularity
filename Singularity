@@ -55,7 +55,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt-get install -y curl gcc kmod make pkg-config xserver-xorg-dev linux-headers-$(uname -r) wget xterm
     
     # Install latest NVIDIA drivers
-    NVIDIA_DRIVER=384.59
+    # NVIDIA_DRIVER=384.59
     # Installing NVidia driver
     # curl -O http://us.download.nvidia.com/XFree86/Linux-x86_64/${NVIDIA_DRIVER}/NVIDIA-Linux-x86_64-${NVIDIA_DRIVER}.run
     # chmod +x NVIDIA-Linux-x86_64-${NVIDIA_DRIVER}.run
