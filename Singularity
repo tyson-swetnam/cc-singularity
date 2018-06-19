@@ -52,7 +52,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     # See Agisoft Cloud Scripts Github for additional instructions: https://github.com/agisoft-llc/cloud-scripts/blob/master/configure.sh 
     
     # Prepare for NVidia drivers install
-    apt-get install -y gcc make pkg-config xserver-xorg-dev linux-headers-$(uname -r) xterm
+    apt-get install -y curl gcc kmod make pkg-config xserver-xorg-dev linux-headers-$(uname -r) xterm
     
     # Install latest NVIDIA drivers
     NVIDIA_DRIVER=384.59
